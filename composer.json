@@ -1,4 +1,5 @@
-{
+
+	
     "name": "zendframework/skeleton-application",
     "description": "Skeleton Application for ZF2",
     "license": "BSD-3-Clause",
@@ -8,7 +9,9 @@
     ],
     "homepage": "http://framework.zend.com/",
     "require": {
+		"zf-commons/zfc-user": "dev-master",
         "php": ">=5.3.3",
-        "zendframework/zendframework": "2.3.3"
+        "zendframework/zendframework": "2.3.3",
+		"doctrine/common" : ">=2.1"
     }
 }

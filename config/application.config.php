@@ -2,7 +2,10 @@
  return array(
      'modules' => array(
          'Application',
-         'Album',                  // <-- Add this line
+         'Album',
+			'ZfcBase',
+			'ZfcUser',
+		  //'SanAuthWithDbSaveHandler'// <-- Add this line
      ),
      'module_listener_options' => array(
          'config_glob_paths'    => array(
