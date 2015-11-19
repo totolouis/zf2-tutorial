@@ -1,0 +1,16 @@
+<?php 
+$title = 'Welcome !';
+$this->headtitle($title);
+?>
+
+<h3><?= $this->escapehtml($title); ?></h3>
+  
+<div class="btn-group">
+    <a class="btn" href="<?= $this->url('user', array('action'=>'account', 'id' => $user->id));?>"><?= $this->translate('Settings'); ?></a>
+    <a class="btn" href="<?= $this->url('user', array('action' => 'signout')); ?>"><?= $this->translate('Log out'); ?></a>
+</div>
+<br/>
+<br/>
+<p>
+    Hi, <strong><?= $user->username ?></strong> !
+</p>

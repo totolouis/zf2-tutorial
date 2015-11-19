@@ -1,0 +1,31 @@
+<?php 
+$title = 'Sign in';
+$this->headtitle($title);
+?>
+
+<h3><?= $this->escapehtml($title); ?></h3>
+
+<?php 
+    $form = $this->form;
+    $form->setAttribute('action', $this->url('user', array('action' => 'signin')));
+    $form->prepare();
+    
+    echo $this->form()->openTag($form);
+    
+    echo '<dl class="zend_form">';
+    echo $this->formHidden($form->get('id'));
+    echo '<dt>' . $this->formLabel($form->get('username')) . '</dt>';
+    echo '<dd>';
+    echo $this->formInput($form->get('username'));
+    echo '</dd>';
+    echo '<dt>' . $this->formLabel($form->get('password')) . '</dt>';
+    echo '<dd>';
+    echo $this->formInput($form->get('password'));
+    echo '</dd>';
+    echo '<dd>';
+    echo $this->formsubmit($form->get('submit')->setAttribute('class', 'btn btn-success'));
+    echo '&nbsp; <a class="btn btn-inverse" href="' . $this->url('user', array('action' => 'signup')) . '">' . $this->translate('Sign up') . '</a>';
+    echo '</dd>';
+    echo '<dl>';
+?>
+
